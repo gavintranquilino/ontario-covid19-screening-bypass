@@ -9,7 +9,7 @@ This project is **not** intended to be used to avoid the COVID-19 guidelines, bu
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the tool.
 
 ```bash
-pip install github-url-here
+pip install https://github.com/GuhBean/ontario-covid19-screening-bypass.git
 ```
 
 Alternatively, download this project as a **.zip** file, and extract into your device.
@@ -59,7 +59,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-See CONTRIBUTING.md file.
+See [CONTRIBUTING.md](https://github.com/GuhBean/ontario-covid19-screening-bypass/blob/master/CONTRIBUTE.md) file.
 
 ## License
-See LICENSE.txt file.
+See [LICENSE](https://github.com/GuhBean/ontario-covid19-screening-bypass/blob/master/LICENSE) file.
