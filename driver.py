@@ -28,70 +28,47 @@ class Driver():
             )
     
     def start_school_screening(self):
-        while True:
-            try:
-                element = self.clickable_xpath('/html/body/div/div[1]/div[3]/main/div/div/div/div[3]/div[1]/button')     
-                if element:
-                    element.click()
-                    return 'Started Screening...'
-                    break
+        try:
+            element = self.clickable_xpath('/html/body/div/div[1]/div[3]/main/div/div/div/div[3]/div[1]/button')     
+            element.click()
+            return 'Started Screening...'
 
-            except TimeoutException:
-                return 'Took too long... Trying again...'
+        except TimeoutException:
+            return 'Took too long... Trying again...'
         
     def select_student(self):
-        while True:
-            try:
-                element = self.clickable_id('student')
-                if element:
-                    element.click()
-                    return 'Selected Student...'
-                    break
+        try:
+            element = self.clickable_id('student')
+            element.click()
+            return 'Selected Student...'
 
-            except TimeoutException:
-                return 'Took too long... Trying again...'
+        except TimeoutException:
+            return 'Took too long... Trying again...'
 
     def select_continue(self, xpath):
-        while True:
-            try:
-                element = self.clickable_xpath(xpath)
-                if element:
-                    element.click()
-                    return 'Continued...'
-                    break
+        try:
+            element = self.clickable_xpath(xpath)
+            element.click()
+            return 'Continued...'
 
-            except TimeoutException:
-                return 'Took too long... Trying again...'
+        except TimeoutException:
+            return 'Took too long... Trying again...'
 
     def select_no(self, xpath):
-        while True:
-            try:
-                element = self.clickable_xpath(xpath)
-                print(element)
+        try:
+            element = self.clickable_xpath(xpath)
+            element.click()
+            return 'Selected No...'
 
-            except TimeoutException:
-                return 'Took too long... Trying again...'
-
-            if element:
-                element.click()
-                return 'Selected No...'
-                break
+        except TimeoutException:
+            return 'Took too long... Trying again...'
     
-    def screenshot(self, filepath=None):
-        while True:
-            try:
-                element = self.clickable_xpath('/html/body/div/div[1]/span/div[2]/main/div/div[1]/div/div')
-                if element:
-                    if filepath:
-                        self.driver.save_screenshot(filepath)
-                        return f"Saved Screenshot as {filepath}"
-                    else:
-                        date_today = date.today()
-                        filename = str(date_today) + '.png'
-                        self.driver.save_screenshot(f"screenshots/{filename}")
-                        return f"Saved Screenshot as {filename}"
-                    break
+    def screenshot(self, filename):
+        try:
+            element = self.clickable_xpath('/html/body/div/div[1]/span/div[2]/main/div/div[1]/div/div')
+            self.driver.save_screenshot(filename)
+            return f"Saved Screenshot as {filename}"
 
-            except TimeoutException:
-                return 'Took too long... Trying again...'
+        except TimeoutException:
+            return 'Took too long... Trying again...'
 

@@ -1,0 +1,6 @@
+Hello ${PERSON_NAME},
+
+Here is your COVID-19 screening validation.
+
+From,
+Bot

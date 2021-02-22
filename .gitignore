@@ -3,6 +3,6 @@ venv/
 geckodriver.log
 __pycache__/
 screenshots/
-config.json
 contacts.txt
 message.txt
+config.json
