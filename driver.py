@@ -3,6 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
+from webdriver_manager.firefox import GeckoDriverManager
 from datetime import date
 
 class Driver():
@@ -11,7 +12,7 @@ class Driver():
     def __init__(self, website, delay):
         """Initialize webdriver and class attributes"""
         
-        self.driver = webdriver.Firefox(executable_path='webdriver/geckodriver.exe')
+        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         self.website = website
         self.delay = delay
     
