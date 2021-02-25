@@ -4,7 +4,12 @@ This is a simple tool to bypass the [Ontario COVID-19 Screening Tool](https://co
 
 This project is **not** intended to be used to avoid the COVID-19 guidelines, but instead a small project to generate valid results. Please **do not** use this tool to get into school or work if you are ineligible to go in public. Make sure you are following the [guidelines](https://covid-19.ontario.ca/) if you are sick.
 
-## Installation
+# Installation
+
+### Python Version
+Download the latest [Python](https://www.python.org/downloads/) release.
+
+This program was built in Python 3.9.0, but should work in Python 3.9.0+
 
 ### Downloading the GitHub repository
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the repository.
@@ -22,7 +27,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the dep
 pip install -r requirements.txt
 ```
 
-## Usage
+# Configuration
 
 ### config.json
 1. Rename **config-sample.json** to **config.json**
@@ -62,7 +67,16 @@ From,
 Bot
 ```
 
-## Contributing
+# Usage
+
+### How do I run this program?
+If you have completed the setup and configuration listed above, open a terminal in this directory and run using this command.
+
+```bash
+python main.py
+```
+
+# Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
