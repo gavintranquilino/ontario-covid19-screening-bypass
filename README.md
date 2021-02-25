@@ -6,13 +6,21 @@ This project is **not** intended to be used to avoid the COVID-19 guidelines, bu
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the tool.
+### Downloading the GitHub repository
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the repository.
 
 ```bash
 pip install https://github.com/GuhBean/ontario-covid19-screening-bypass.git
 ```
 
 Alternatively, download this project as a **.zip** file, and extract into your device.
+
+### Downloading the dependencies
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the dependencies listed in **requirements.txt**.
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
