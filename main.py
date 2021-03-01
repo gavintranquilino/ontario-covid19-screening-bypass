@@ -69,7 +69,7 @@ def main():
     """Main function"""
 
     handle_website()
-    # handle_email()
+    handle_email()
 
 if __name__ == '__main__':
     main()
