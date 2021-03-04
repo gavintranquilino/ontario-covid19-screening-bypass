@@ -81,7 +81,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-See [CONTRIBUTING.md](https://github.com/GuhBean/ontario-covid19-screening-bypass/blob/master/CONTRIBUTE.md) file.
+See [CONTRIBUTING.md](https://github.com/GuhBean/ontario-covid19-screening-bypass/blob/master/CONTRIBUTING.md) file.
 
 ## License
 See [LICENSE](https://github.com/GuhBean/ontario-covid19-screening-bypass/blob/master/LICENSE) file.
