@@ -30,7 +30,7 @@ pip install -r requirements.txt
 # Configuration
 
 ### config.json
-1. Rename **config-sample.json** to **config.json**
+1. Locate and open config.json
 2. Enter the *email* and its *password* into the config.json file
 
 ```json
@@ -41,22 +41,21 @@ pip install -r requirements.txt
 ```
 
 ### contacts.txt
-1. Locate **contacts-sample.txt** in the *templates* folder
-2. Rename **contacts-sample.txt** to *contacts.txt*
-3. Fill the text file with the *name of the recipient* and the *respective email address*
+1. Locate **contacts.txt** in the *templates* folder
+. Fill the text file with the *name of the recipient* and the *respective email address*
 
 ```
-firstname name@website.domain
-firstname name@website.domain
-firstname name@website.domain
-firstname name@website.domain
-firstname name@website.domain
+name name@website.domain
+name name@website.domain
+name name@website.domain
+name name@website.domain
+name name@website.domain
+name name@website.domain
 ```
 
 ### message.txt
-1. Locate **message-sample.txt** file in the *templates* folder
-2. Rename **message-sample.txt** to **message.txt**
-3. Fill the text file with the message you want to send
+1. Locate **message.txt** file in the *templates* folder
+2. Fill the text file with the message you want to send
 
 ```
 Hello ${PERSON_NAME},
