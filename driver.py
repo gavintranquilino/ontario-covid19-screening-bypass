@@ -20,7 +20,6 @@ class Driver():
         """Open the screening tool in the webdriver"""
 
         self.driver.get(self.website)
-        return 'Opening website...'
 
     def clickable_xpath(self, xpath):
         """Return a clickable xpath element"""
@@ -42,10 +41,9 @@ class Driver():
         try:
             element = self.clickable_xpath('/html/body/div/div[1]/div[3]/main/div/div/div/div[3]/div[1]/button')     
             element.click()
-            return 'Started Screening...'
 
         except TimeoutException:
-            return 'Took too long... Trying again...'
+            raise TimeoutException('Webdriver waited too long for a response. Try running the program again')
         
     def select_student(self):
         """Click the student button"""
@@ -53,21 +51,19 @@ class Driver():
         try:
             element = self.clickable_id('student')
             element.click()
-            return 'Selected Student...'
-
+            
         except TimeoutException:
-            return 'Took too long... Trying again...'
-
+           raise TimeoutException('Webdriver waited too long for a response. Try running the program again')
+        
     def select_continue(self, xpath):
         """Click continue"""
 
         try:
             element = self.clickable_xpath(xpath)
             element.click()
-            return 'Continued...'
-
+       
         except TimeoutException:
-            return 'Took too long... Trying again...'
+            raise TimeoutException('Webdriver waited too long for a response. Try running the program again')
 
     def select_no(self, xpath):
         """Click No"""
@@ -75,10 +71,9 @@ class Driver():
         try:
             element = self.clickable_xpath(xpath)
             element.click()
-            return 'Selected No...'
 
         except TimeoutException:
-            return 'Took too long... Trying again...'
+            raise TimeoutException('Webdriver waited too long for a response. Try running the program again')
     
     def screenshot(self, filename):
         """Take a screenshot of the verified screen"""
@@ -86,8 +81,6 @@ class Driver():
         try:
             element = self.clickable_xpath('/html/body/div/div[1]/span/div[2]/main/div/div[1]/div/div')
             self.driver.save_screenshot(filename)
-            return f"Saved Screenshot as {filename}"
 
         except TimeoutException:
-            return 'Took too long... Trying again...'
-
+            raise TimeoutException('Webdriver waited too long for a response. Try running the program again')

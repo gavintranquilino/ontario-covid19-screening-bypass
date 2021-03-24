@@ -17,23 +17,32 @@ class Email(object):
         self.emails = []
         self.smtp = smtplib.SMTP(host=host, port=port)
     
-    def get_contacts(self, filename):
+    def get_contacts(self):
         """Put all contacts from contacts.txt to a list"""
 
-        with open (filename, mode='r', encoding='utf-8') as contacts_file:
-            for contact in contacts_file:
-                self.names.append(contact.split()[0]) # Put names in names list
-                self.emails.append(contact.split()[1]) # Put emails in emails list
-        return 'Read Contacts...'
+        try:
+            with open ('templates/default_contacts.txt', mode='r', encoding='utf-8') as contacts_file:
+                for contact in contacts_file:
+                    self.names.append(contact.split()[0]) # Put names in names list
+                    self.emails.append(contact.split()[1]) # Put emails in emails list
+        except:
+            with open ('templates/contacts.txt', mode='r', encoding='utf-8') as contacts_file:
+                for contact in contacts_file:
+                    self.names.append(contact.split()[0]) # Put names in names list
+                    self.emails.append(contact.split()[1]) # Put emails in emails list
+            
     
-    def read_template(self, filename):
+    def read_template(self):
         """Read message template from messsage.txt"""
-
-        with open(filename, mode='r', encoding='utf-8') as template_file:
-            template_content = template_file.read()
-        self.message_template = Template(template_content)
-        return 'Read Template Message...'
-    
+        try:
+            with open('templates/default_message.txt', mode='r', encoding='utf-8') as template_file:
+                template_content = template_file.read()
+            self.message_template = Template(template_content)
+        except:
+            with open('templates/message.txt', mode='r', encoding='utf-8') as template_file:
+                template_content = template_file.read()
+            self.message_template = Template(template_content)
+         
     def setup_smtp_server(self, email_address, password):
         """Initialize SMTP server"""
 
@@ -68,7 +77,5 @@ class Email(object):
             mime.attach(self.get_img(image_path))
 
             self.smtp.send_message(mime)
-
-            return f"Sent Email to {name} {email}"
 
             del mime
