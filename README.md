@@ -1,5 +1,7 @@
 # ONTARIO COVID-19 SCREENING TOOL BYPASS
 
+## NOTE: NO LONGER WORKING
+
 This is a simple tool to bypass the [Ontario COVID-19 Screening Tool](https://covid-19.ontario.ca/school-screening/). A list of contacts can be emailed the results to avoid the need to fill out the form. 
 
 This project is **not** intended to be used to avoid the COVID-19 guidelines, but instead a small project to generate valid results. Please **do not** use this tool to get into school or work if you are ineligible to go in public. Make sure you are following the [guidelines](https://covid-19.ontario.ca/) if you are sick.
